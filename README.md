@@ -18,10 +18,10 @@ Pre-requisits
 -------------
 
 Awesome maven:
-  - mvn site should be h5bp based
-  - http://maven.apache.org/guides/mini/guide-site.html
+* mvn site should be h5bp based
+* http://maven.apache.org/guides/mini/guide-site.html
 
 Markdown for maven site
-  - https://bitbucket.org/nicoulaj/doxia-module-markdown/
-  - http://codeslife.com/2011/05/05/markdown-is-supported-in-maven-site/
-  - https://github.com/larrycai/doxia-module-markdown
+* https://bitbucket.org/nicoulaj/doxia-module-markdown/
+* http://codeslife.com/2011/05/05/markdown-is-supported-in-maven-site/
+* https://github.com/larrycai/doxia-module-markdown
