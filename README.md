@@ -14,7 +14,9 @@ Heavily inspired by html5boilerplate.com and domainszomg.com
 ![Logical Awesome](http://logicalawesome.com/logical_awesome.jpg)
 
 
-== Pre-requisits
+Pre-requisits
+-------------
+
 Awesome maven:
   - mvn site should be h5bp based
   - http://maven.apache.org/guides/mini/guide-site.html
