@@ -27,3 +27,17 @@ Markdown for maven site
 * https://bitbucket.org/nicoulaj/doxia-module-markdown/
 * http://codeslife.com/2011/05/05/markdown-is-supported-in-maven-site/
 * https://github.com/larrycai/doxia-module-markdown
+
+* http://www.mkyong.com/maven/how-to-create-a-project-with-maven-template/
+
+TODO
+----
+
+* issues with pom for maven archetype
+  * site has warnings due to unspecified version on plugin
+  * no site is created when running mvn site on maven 3
+    * need to add maven-project-info-reports-plugin as per:
+      http://maven.apache.org/plugins/maven-site-plugin-3.0-beta-3/maven-3.html
+
+
+

@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--~~ BEGIN AWEZOMG ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<groupId>com.awezomg.java</groupId>
+	<artifactId>java-awezomg</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<!-- 'jar' for libs, 'war' for webapps -->
+	<packaging>jar</packaging>
+
+	<!-- Docs. Helps you figure out wtf this pile is a year from now -->
+	<name>Java Awezomg</name>
+	<url>http://java.awezomg.com</url>
+	<description>Helping Make more awesomez since 2012.</description>
+	<inceptionYear>2012</inceptionYear>
+	<developers>
+		<!-- (Wo)Man up and take some credit. (aka blame) -->
+		<developer>
+			<id>your-source-control-id-here</id>
+			<name>Your Human Name Here</name>
+			<email>dont-bother-me@example.org</email>
+			<url>http://humanstxt.org/</url>
+		</developer>
+	</developers>
+
+	<scm>
+		<developerConnection>scm:https://svn2.hosted-projects.com/alexanderballardltd/pact/PACT/trunk</developerConnection>
+	</scm>
+
+	<issueManagement>
+		<system>Trac</system>
+		<url>http://example.org</url>
+	</issueManagement>
+
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://example.org</url>
+	</ciManagement>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<!-- End docs. -->
+
+	<properties>
+		<!-- Tell Maven to use UTF-8 rather than your OS defualt encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<jdk.version>6</jdk.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<locales>en,fr</locales>
+
+					<!-- Config for mvn site documentation-->
+					<reportPlugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-project-info-reports-plugin</artifactId>
+							<version>2.4</version>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-javadoc-plugin</artifactId>
+							<version>2.8.1</version>
+						</plugin>
+						<!-- Creates cross referenced source code in html -->
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-jxr-plugin</artifactId>
+							<version>2.3</version>
+						</plugin>
+					</reportPlugins>
+				</configuration>
+			</plugin> <!-- End maven-site-plugin -->
+
+		</plugins>
+	</build>
+</project>
