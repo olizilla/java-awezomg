@@ -25,7 +25,9 @@
 	</developers>
 
 	<scm>
-		<developerConnection>scm:https://svn2.hosted-projects.com/alexanderballardltd/pact/PACT/trunk</developerConnection>
+		<url>https://github.com/olizilla/java-awezomg</url>
+		<connection>scm:git:https://github.com/olizilla/java-awezomg.git</connection>
+		<developerConnection>scm:git:git@github.com:olizilla/java-awezomg.git</developerConnection>
 	</scm>
 
 	<issueManagement>
@@ -85,6 +87,10 @@
 							<groupId>org.apache.maven.plugins</groupId>
 							<artifactId>maven-javadoc-plugin</artifactId>
 							<version>2.8.1</version>
+							<configuration>
+								<!--<stylesheet>maven</stylesheet>-->
+								<stylesheetfile>src/main/javadoc/resources/javadoc.css</stylesheetfile>
+							</configuration>
 						</plugin>
 						<!-- Creates cross referenced source code in html -->
 						<plugin>
