@@ -34,7 +34,7 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body { margin: 0; font-size: 0.9em; line-height: 1.4; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -44,19 +44,6 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
-
-/* =============================================================================
-   Links
-   ========================================================================== */
-
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-
-/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
-a:hover, a:active { outline: 0; }
 
 
 /* =============================================================================
@@ -206,38 +193,128 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+/* =============================================================================
+	 Links
+	 ========================================================================== */
+
+a { color: steelblue;  text-decoration: none }
+a:visited { color: steelblue; }
+a:hover { color: seagreen; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
 
 /* ==|== primary styles =====================================================
    Author:
    ========================================================================== */
 
-html {
-	background-color: #daa520;
+body{
+	padding: 10px 14px;
+}
+body>hr:first-child{
+	display: none;
 }
 
+/* javadoc classes */
+.TableHeadingColor {
+	background-color: steelblue;
+	color: #eee;
+}
+.TableHeadingColor th b {
+	font-size: 0.6em;
+}
+/*
+The nav structure is pretty wild...
 
+   table
+     tr
+       td.NavBarCell1 bgcolor="#EEEEFF"
+         table
+           td.NavBarCell1       "Overview"
+            &nbsp; td.NavBarCell1Rev    "Package"
+           td.NavBarCell1       "Class"
+           td.NavBarCell1       "Use"
 
+     tr
+       td.NavBarCell2           "Next, Prev"
+       td.NavBarCell2           "Frames, No Frames
 
+where NavBarCell1Rev means it's the selected item.
+*/
 
+.NavBarCell1[colspan="2"]{
+	background-color: #fff;
+}
+/* fix for the &nbsp nav jumping problem */
+.NavBarCell1 .NavBarCell1:before {
+	content:" ";
+	display: inline-block;
+}
+.NavBarCell1[colspan="2"]{
+	margin-left: -0.2em;
+	display: inline-block;
+}
+.NavBarCell3:first-child{
+	padding-left: 3px;
+}
+/* END &nbsp fix */
 
+/* Nav: Overview, Package, Class, Use, etc. */
+.NavBarCell1 .NavBarCell1,
+.NavBarCell1 .NavBarCell1Rev {
+	padding: 0;
+	color:lightblue;
+	font-weight: bold;
+	background-color: transparent;
+}
+.NavBarCell1 .NavBarCell1 {
+	/*padding-left: 30px;*/
+}
+/* Selected item */
+.NavBarCell1 .NavBarCell1Rev {
+	color:dodgerblue;
+}
+.NavBarCell2,
+.NavBarCell3
+{
+	padding: 4px 0 0;
+	font-weight: bold;
+	color:lightblue;
+}
+/* Nav: PREV, NEXT */
+.NavBarCell2:first-child {
 
-
-
-
-
-
-
-
-/* ==|== media queries ======================================================
-   EXAMPLE Media Query for Responsive Design.
-   This example overrides the primary ('mobile first') styles
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
+}
+/* Frames, No Frames */
+.NavBarCell2:last-child {
+	opacity: 0;
+	text-align: right;
+}
+.NavBarCell2:last-child:hover {
+	opacity: 1;
 }
 
+/* package lists */
+table[border="1"],
+table[border="1"] td {
+	border: solid 1px #4682b4;
+}
+.FrameHeadingFont { /* package list header is normal wight, class list header is bold */
+	font-weight: bold;
+}
+
+/* Tree */
+ul ul {
+	margin-top: 0;
+}
+li[type=circle]{
+	list-style: none;
+}
+/* Better list item for a tree */
+li[type=circle]:before{
+	content:"↳ ";
+}
 
 
 /* ==|== non-semantic helper classes ========================================
