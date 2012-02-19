@@ -20,7 +20,7 @@ Overview page before:
 ![joda-time-javadoc-overview-regular](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-overview-regular.png)
 
 Overview page after:
-![joda-time-javadoc-overview-awezomg](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-overview-regular.png)
+![joda-time-javadoc-overview-awezomg](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-overview-awezomg.png)
 
 Tree page before:
 ![joda-time-javadoc-tree-regular](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-tree-regular.png)
@@ -28,6 +28,7 @@ Tree page before:
 Tree page after:
 ![joda-time-javadoc-tree-awezomg](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-tree-awezomg.png)
 
+OK, so perhaps not totally awesome just yet, but better, and minimal fuss to set up.
 
 
 Pre-requisits
