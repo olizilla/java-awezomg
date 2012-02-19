@@ -1,5 +1,5 @@
 
-Java Awezomg
+Java AWEZOMG
 ============
 
 Java was invented during the war. As such it's still unsure about all these web whippersnappers and their do-hickies.
@@ -12,6 +12,22 @@ Heavily inspired by html5boilerplate.com and domainszomg.com
 
 
 ![Logical Awesome](http://logicalawesome.com/logical_awesome.jpg)
+
+
+javadoc AWEZOMG
+---------------
+Overview page before:
+![joda-time-javadoc-overview-regular](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-overview-regular.png)
+
+Overview page after:
+![joda-time-javadoc-overview-awezomg](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-overview-regular.png)
+
+Tree page before:
+![joda-time-javadoc-tree-regular](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-tree-regular.png)
+
+Tree page after:
+![joda-time-javadoc-tree-awezomg](https://github.com/olizilla/java-awezomg/raw/master/src/site/img/joda-time-javadoc-tree-awezomg.png)
+
 
 
 Pre-requisits
@@ -29,6 +45,8 @@ Markdown for maven site
 * https://github.com/larrycai/doxia-module-markdown
 
 * http://www.mkyong.com/maven/how-to-create-a-project-with-maven-template/
+
+
 
 TODO
 ----
