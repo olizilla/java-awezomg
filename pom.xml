@@ -58,6 +58,70 @@
 		<jdk.version>6</jdk.version>
 	</properties>
 
+	<!-- Defines projects that this project depends on -->
+	<dependencies>
+		<!--
+		<dependency>
+			<groupId></groupId>
+			<artifactId></artifactId>
+			<version>${dependency.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		-->
+	</dependencies>
+
+	<!-- Profiles allow you to easily change build behaviour -->
+	<!-- Note that you can also define personal profiles in your ~/.m2/settings.xml -->
+	<profiles>
+
+		<!-- Profile for defining application defaults, active by default -->
+		<profile>
+			<id>com.awezomg.maven.profile.default</id>
+			<!-- Activate this profile unless the no-default profile is enabled -->
+			<activation>
+				<property>
+					<name>!com.awezomg.maven.profile.no-default</name>
+				</property>
+			</activation>
+			<properties>
+				<!-- Default properties that are used unless overridden by another profile -->
+			</properties>
+		</profile>
+
+		<!-- Profile for your development environment -->
+		<profile>
+			<id>com.awezomg.maven.profile.dev</id>
+			<properties>
+				<!-- Properties that are used when this profile is active -->
+			</properties>
+		</profile>
+
+		<!-- Profile for your nightly environment -->
+		<profile>
+			<id>com.awezomg.maven.profile.nightly</id>
+			<properties>
+				<!-- Properties that are used when this profile is active -->
+			</properties>
+		</profile>
+
+		<!-- Profile for your test environment -->
+		<profile>
+			<id>com.awezomg.maven.profile.test</id>
+			<properties>
+				<!-- Properties that are used when this profile is active -->
+			</properties>
+		</profile>
+
+		<!-- Profile for your live environment -->
+		<profile>
+			<id>com.awezomg.maven.profile.live</id>
+			<properties>
+				<!-- Properties that are used when this profile is active -->
+			</properties>
+		</profile>
+
+	</profiles>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -104,4 +168,27 @@
 
 		</plugins>
 	</build>
+
+	<!-- Tell maven where to find your dependencies if not in central -->
+	<repositories>
+		<!--
+		<repository>
+			<id></id>
+			<name></name>
+			<url></url>
+		</repository>
+		-->
+	</repositories>
+
+	<!-- Tell maven where to find your plugins if not in central -->
+	<pluginRepositories>
+		<!--
+		<pluginRepository>
+			<id></id>
+			<name></name>
+			<url></url>
+		</pluginRepository>
+		-->
+	</pluginRepositories>
+
 </project>
