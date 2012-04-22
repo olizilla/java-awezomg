@@ -31,7 +31,7 @@ Tree page after:
 OK, so perhaps not totally awesome just yet, but better, and minimal fuss to set up.
 
 
-Pre-requisits
+Pre-requisites
 -------------
 
 Awesome maven:
